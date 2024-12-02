@@ -92,6 +92,10 @@ st.markdown("""
         .stButton>button:hover {
             background-color: #283618;
         }
+
+        .css-1v0mbdj {
+            color: #606C38 !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
