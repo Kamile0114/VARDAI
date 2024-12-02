@@ -69,9 +69,9 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
 st.markdown(
     """
     <style>
-    .main { background-color: #231650; }
+    .main { background-color: #FEFAE0; }
     h1 { color: #ff5733; text-align: center; font-family: 'Comic Sans MS', sans-serif; }
-    .result { text-align:center; background-color:#ffefba; padding:10px; border-radius:10px; margin-top:20px; }
+    .result { text-align:center; background-color:#FEFAE0; padding:10px; border-radius:10px; margin-top:20px; }
     </style>
     """,
     unsafe_allow_html=True
