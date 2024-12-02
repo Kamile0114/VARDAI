@@ -82,7 +82,7 @@ st.markdown("""
             background-color: #283618;
         }
         .stButton>button {
-            background-color: #606C38;
+            background-color: #C6CEAA;
             color: white;
             border-radius: 8px;
             font-family: 'Times New Roman', serif;
