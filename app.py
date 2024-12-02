@@ -68,7 +68,7 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
 st.markdown("""
     <style>
          .stApp {
-            background-color: #FEFAE0;
+            background-color: #F0F3E7;
         }
         .css-18e3th9 {
             color: #606C38;
