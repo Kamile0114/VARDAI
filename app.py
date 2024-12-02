@@ -77,12 +77,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("🎨 AI Name Generator 🚀")
+st.title("AI Name Generator")
 st.subheader("Discover unique names with a touch of AI magic!")
 
-gender = st.radio("👩‍👦 Select Gender:", ["Male", "Female"], horizontal=True)
-start_letter = st.text_input("🔤 Enter Starting Letter:", value="A", placeholder="Try 'J' for inspiration!")
-temperature = st.slider("🔥 Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
+gender = st.radio("Select Gender:", ["Male", "Female"], horizontal=True)
+start_letter = st.text_input("Enter Starting Letter:", value="A", placeholder="Try 'J' for inspiration!")
+temperature = st.slider("Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
 
 if st.button("✨ Generate Name ✨"):
     gender_val = 0 if gender == "Male" else 1
