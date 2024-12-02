@@ -65,13 +65,13 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
         return output_name.capitalize()
 
 # Streamlit app
-st.title("Lietuviškų vardų generatorius")
+st.title("AI Name Generator")
 
-gender = st.radio(["Vyro vardas", "Moters vardas"])
-start_letter = st.text_input("Pasirinkite pirmąją vardo raidę:", value="A")
+gender = st.radio("Select Gender:", ["Male", "Female"])
+start_letter = st.text_input("Enter Starting Letter:", value="A")
 temperature = st.slider("Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
 
-if st.button("Generuoti naują vardą"):
+if st.button("Generate Name"):
     gender_val = 0 if gender == "Male" else 1
     generated_name = sample(model, gender=gender_val, start_str=start_letter, temperature=temperature)
-    st.write(f"Gautas vardas: **{generated_name}**")
+    st.write(f"Generated Name: **{generated_name}**")
