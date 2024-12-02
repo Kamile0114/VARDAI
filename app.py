@@ -67,9 +67,8 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
 # Streamlit app styling with custom CSS
 st.markdown("""
     <style>
-        body {
+         .stApp {
             background-color: #FEFAE0;
-            font-family: 'Times New Roman', serif;
         }
         .css-18e3th9 {
             color: #606C38;
