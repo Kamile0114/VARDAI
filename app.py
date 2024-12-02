@@ -81,8 +81,17 @@ st.markdown("""
         .css-1emrehy:hover {
             background-color: #283618;
         }
-        .css-12ttj6m {
+        .stButton>button {
+            background-color: #606C38;
+            color: white;
+            border-radius: 8px;
             font-family: 'Times New Roman', serif;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .stButton>button:hover {
+            background-color: #283618;
         }
     </style>
 """, unsafe_allow_html=True)
