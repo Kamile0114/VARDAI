@@ -16,7 +16,6 @@ st.markdown(
         }
         /* Header and titles */
         .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
-            color: #FEFAE0;
             font-family: "Georgia", serif;
         }
         /* Text and input fields */
