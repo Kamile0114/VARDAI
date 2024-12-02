@@ -92,21 +92,17 @@ st.markdown("""
         .stButton>button:hover {
             background-color: #283618;
         }
-
-        .css-1v0mbdj {
-            color: #606C38 !important;
-        }
     </style>
 """, unsafe_allow_html=True)
 
 # Streamlit app
-st.title("AI Name Generator")
+st.title("Lietuviškų vardų generatorius")
 
-gender = st.radio("Select Gender:", ["Male", "Female"])
-start_letter = st.text_input("Enter Starting Letter:", value="A")
-temperature = st.slider("Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
+gender = st.radio("Pasirinkti:", ["Vyro vardas", "Moters vardas"])
+start_letter = st.text_input("Įrašykite pirmąją norimo vardo raidę:", value="A")
+temperature = st.slider("Generatoriaus kūrybiškumas:", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
 
-if st.button("Generate Name"):
-    gender_val = 0 if gender == "Male" else 1
+if st.button("Generuoti naują vardą"):
+    gender_val = 0 if gender == "Vyro vardas" else 1
     generated_name = sample(model, gender=gender_val, start_str=start_letter, temperature=temperature)
-    st.write(f"Generated Name: **{generated_name}**")
+    st.write(f"Sugeneruotas vardas: **{generated_name}**")
