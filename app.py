@@ -21,7 +21,7 @@ st.markdown(
         }
         /* Text and input fields */
         .stMarkdown, .stMarkdown p {
-            color: #606C38;
+            color: #283618;
             font-family: "Georgia", serif;
         }
         /* Button styling */
