@@ -6,6 +6,42 @@ import pandas as pd
 from torch.nn.utils.rnn import pad_sequence
 import torch.nn as nn
 
+# CSS styles
+st.markdown(
+    """
+    <style>
+        /* Background color */
+        .stApp {
+            background-color: #FEFAE0;
+        }
+        /* Header and titles */
+        .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+            color: #283618;
+            font-family: "Georgia", serif;
+        }
+        /* Text and input fields */
+        .stMarkdown, .stMarkdown p {
+            color: #606C38;
+            font-family: "Georgia", serif;
+        }
+        /* Button styling */
+        .stButton>button {
+            background-color: #606C38;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-family: "Georgia", serif;
+            border-radius: 5px;
+        }
+        /* Button hover effect */
+        .stButton>button:hover {
+            background-color: #283618;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Define the Transformer model
 class GenderAwareTransformer(nn.Module):
     def __init__(self, vocab_size, embed_size, num_heads, forward_expansion):
