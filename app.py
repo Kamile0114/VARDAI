@@ -69,49 +69,22 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
 st.markdown(
     """
     <style>
-    /* Background Color */
-    .main {
-        background-color: #FEFAE0;
-    }
-    
-    /* Title and Subheader Text Styling */
-    h1, h2 {
-        color: #283618;
-        font-family: 'Georgia', serif;
-        text-align: center;
-    }
-    
-    /* General Text Styling */
-    p, label {
-        color: #606C38;
-        font-family: 'Times New Roman', serif;
-    }
-    
-    /* Result Box */
-    .result {
-        background-color: #FAF3DD;
-        color: #283618;
-        font-family: 'Georgia', serif;
-        padding: 20px;
-        border-radius: 15px;
-        text-align: center;
-        margin-top: 20px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    .main { background-color: #f5f5f5; }
+    h1 { color: #ff5733; text-align: center; font-family: 'Comic Sans MS', sans-serif; }
+    .result { text-align:center; background-color:#ffefba; padding:10px; border-radius:10px; margin-top:20px; }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Content
-st.title("AI Name Generator")
+st.title("🎨 AI Name Generator 🚀")
 st.subheader("Discover unique names with a touch of AI magic!")
 
-gender = st.radio("Select Gender:", ["Male", "Female"], horizontal=True)
-start_letter = st.text_input("Enter Starting Letter:", value="A", placeholder="Try 'J' for inspiration!")
-temperature = st.slider("Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
+gender = st.radio("👩‍👦 Select Gender:", ["Male", "Female"], horizontal=True)
+start_letter = st.text_input("🔤 Enter Starting Letter:", value="A", placeholder="Try 'J' for inspiration!")
+temperature = st.slider("🔥 Select Creativity Level (Temperature):", min_value=0.1, max_value=2.0, value=1.0, step=0.1)
 
-if st.button("Generate Name"):
+if st.button("✨ Generate Name ✨"):
     gender_val = 0 if gender == "Male" else 1
     generated_name = sample(model, gender=gender_val, start_str=start_letter, temperature=temperature)
     st.markdown(f'<div class="result"><h2>{generated_name}</h2></div>', unsafe_allow_html=True)
