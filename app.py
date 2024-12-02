@@ -6,42 +6,6 @@ import pandas as pd
 from torch.nn.utils.rnn import pad_sequence
 import torch.nn as nn
 
-# CSS styles
-st.markdown(
-    """
-    <style>
-        /* Background color */
-        .stApp {
-            background-color: #FEFAE0;
-        }
-        /* Header and titles */
-        .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
-            color: #606C38;
-            font-family: "Georgia", serif;
-        }
-        /* Text and input fields */
-        .stMarkdown, .stMarkdown p {
-            color: #283618;
-            font-family: "Georgia", serif;
-        }
-        /* Button styling */
-        .stButton>button {
-            background-color: #606C38;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            font-family: "Georgia", serif;
-            border-radius: 5px;
-        }
-        /* Button hover effect */
-        .stButton>button:hover {
-            background-color: #283618;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Define the Transformer model
 class GenderAwareTransformer(nn.Module):
     def __init__(self, vocab_size, embed_size, num_heads, forward_expansion):
@@ -99,6 +63,29 @@ def sample(model, gender, start_str='a', max_length=20, temperature=1.0):
             input_seq = torch.cat([input_seq, torch.tensor([[next_char_idx]])], dim=1)
 
         return output_name.capitalize()
+
+# Streamlit app styling with custom CSS
+st.markdown("""
+    <style>
+        body {
+            background-color: #FEFAE0;
+            font-family: 'Times New Roman', serif;
+        }
+        .css-18e3th9 {
+            color: #606C38;
+        }
+        .css-1emrehy {
+            background-color: #606C38;
+            color: white;
+        }
+        .css-1emrehy:hover {
+            background-color: #283618;
+        }
+        .css-12ttj6m {
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Streamlit app
 st.title("AI Name Generator")
